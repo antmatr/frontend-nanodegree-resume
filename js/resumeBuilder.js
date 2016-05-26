@@ -16,14 +16,22 @@ var bio =
         "biopic": "https://s3.amazonaws.com/accredible-api-users/images/122883/original/data?1462825868",
         "display": function () {
             $("#header")
-            .prepend(HTMLheaderRole.replace("%data%", bio.role))
-            .prepend(HTMLheaderName.replace("%data%", bio.name))
-            .append(HTMLemail.replace("%data%", bio.contacts.email))
-            .append(HTMLgithub.replace("%data%", bio.contacts.gitHub))
-            .append(HTMLlocation.replace("%data%", bio.contacts.location))
-            .append(HTMLbioPic.replace("%data%", bio.biopic))
-            .append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage))
-            .append(HTMLschoolName.replace("%data%", education.schools[0].name));
+                .prepend(HTMLheaderRole.replace("%data%", bio.role))
+                .prepend(HTMLheaderName.replace("%data%", bio.name))
+                .append(HTMLbioPic.replace("%data%", bio.biopic))
+                .append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+
+            $("#topContacts")
+                .append(HTMLmobile.replace("%data%", bio.contacts.mobile))
+                .append(HTMLemail.replace("%data%", bio.contacts.email))
+                .append(HTMLtwitter.replace("%data%", bio.contacts.twitter))
+                .append(HTMLgithub.replace("%data%", bio.contacts.gitHub))
+
+                //.append(HTMLblog.replace("%data%", bio.contacts.blog))
+                // there are "HTMLblog" element in helper.js,
+                // but there is no "blog" in bio-object scheme
+
+                .append(HTMLlocation.replace("%data%", bio.contacts.location));
 
             if (bio.skills.length > 0) {
                 $("#header").append(HTMLskillsStart);
@@ -39,15 +47,15 @@ var bio =
         "schools":
             [
                 {
-                    "name": "State School #94",
+                    "name": "Saint-Petersburg State University of Culture and Arts",
                     "location": "Saint-Petersburg, Russia",
-                    "degree": "High school",
+                    "degree": "Master",
                     "majors":
                         [
-                            "IT", "English"
+                            "Design", "CS"
                         ],
-                    "dates": "1997 - 2007",
-                    "url": "http://www.school-94.narod.ru/"
+                    "dates": "2009 - 2014",
+                    "url": "http://www.spbgik.ru/"
                 }
             ],
         "onlineCourses":
@@ -107,7 +115,7 @@ var bio =
                     "title": "Freelancer",
                     "location": "Haifa, Israel",
                     "dates": "2015 - now",
-                    "description": "Email-newsletter layout, flash-banners"
+                    "description": "Email-newsletters, flash-banners"
                 }
             ],
         "display": function () {
