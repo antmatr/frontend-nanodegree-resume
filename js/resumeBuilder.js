@@ -1,87 +1,67 @@
-var bio =
-    {
-        "name": "Anton Matrosov",
-        "role": "Front-End Developer",
-        "contacts": {
-            "mobile": "+97253-700-00-00",
-            "email": "antmatr@yandex.ru",
-            "github": "antmatr",
-            "twitter": "@antmatr",
-            "location": "Haifa, Israel"
-        },
-        "welcomeMessage": "Lorem Ipsum!",
-        "skills": [
-                "HTML", "CSS", "JavaScript", "Git and GitHub", "Web Design"
-        ],
-        "biopic": "https://s3.amazonaws.com/accredible-api-users/images/122883/original/data?1462825868"
+var bio = {
+    "name": "Anton Matrosov",
+    "role": "Front-End Developer",
+    "contacts": {
+        "mobile": "+97253-700-00-00",
+        "email": "antmatr@yandex.ru",
+        "github": "antmatr",
+        "twitter": "@antmatr",
+        "location": "Haifa, Israel"
     },
-    education =
-    {
-        "schools":
-            [
-                {
-                    "name": "Saint-Petersburg State University of Culture and Arts",
-                    "location": "Saint-Petersburg, Russia",
-                    "degree": "Master",
-                    "majors":
-                        [
-                            "Design", "CS"
-                        ],
-                    "dates": "2009 - 2014",
-                    "url": "http://www.spbgik.ru/"
-                }
+    "welcomeMessage": "Lorem Ipsum!",
+    "skills": [
+        "HTML", "CSS", "JavaScript", "Git and GitHub", "Web Design"
+    ],
+    "biopic": "https://s3.amazonaws.com/accredible-api-users/images/122883/original/data?1462825868"
+},
+    education = {
+        "schools": [{
+            "name": "Saint-Petersburg State University of Culture and Arts",
+            "location": "Saint-Petersburg, Russia",
+            "degree": "Master",
+            "majors": [
+                "Design", "CS"
             ],
-        "onlineCourses":
-            [
-                {
-                    "title": "Udacity Front-End Developer Nanodegree",
-                    "school": "Udacity",
-                    "date": "2016",
-                    "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-                }
-            ]
+            "dates": "2009 - 2014",
+            "url": "http://www.spbgik.ru/"
+        }],
+        "onlineCourses": [{
+            "title": "Udacity Front-End Developer Nanodegree",
+            "school": "Udacity",
+            "date": "2016",
+            "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+        }]
     },
-    work =
-    {
-        "jobs":
-            [
-                {
-                    "employer": "Myself",
-                    "title": "Freelancer",
-                    "location": "Saint-Petersburg, Russia",
-                    "dates": "2012 - 2014",
-                    "description": "Flash-banners, 3d-modeling"
-                },
-                {
-                    "employer": "Initflow",
-                    "title": "Front-End Developer",
-                    "location": "Saint-Petersburg, Russia",
-                    "dates": "2014 - 2015",
-                    "description": "Front-End developing using HTML5, CSS, JS"
-                },
-                {
-                    "employer": "Myself",
-                    "title": "Freelancer",
-                    "location": "Haifa, Israel",
-                    "dates": "2015 - now",
-                    "description": "Email-newsletters, flash-banners"
-                }
-            ]
+    work = {
+        "jobs": [{
+            "employer": "Myself",
+            "title": "Freelancer",
+            "location": "Saint-Petersburg, Russia",
+            "dates": "2012 - 2014",
+            "description": "Flash-banners, 3d-modeling"
+        }, {
+            "employer": "Initflow",
+            "title": "Front-End Developer",
+            "location": "Saint-Petersburg, Russia",
+            "dates": "2014 - 2015",
+            "description": "Front-End developing using HTML5, CSS, JS"
+        }, {
+            "employer": "Myself",
+            "title": "Freelancer",
+            "location": "Haifa, Israel",
+            "dates": "2015 - now",
+            "description": "Email-newsletters, flash-banners"
+        }]
     },
-    projects =
-    {
-        "projects":
-            [
-                {
-                    "title": "Portfolio",
-                    "dates": "2016",
-                    "description": "Udacity Front-End Developer Nanodegree Project",
-                    "images":
-                        [
-                            "https://s3.amazonaws.com/accredible_api_evidence_items/previews/137807/large/1462894789958?1462894059"
-                        ]
-                }
+    projects = {
+        "projects": [{
+            "title": "Portfolio",
+            "dates": "2016",
+            "description": "Udacity Front-End Developer Nanodegree Project",
+            "images": [
+                "https://s3.amazonaws.com/accredible_api_evidence_items/previews/137807/large/1462894789958?1462894059"
             ]
+        }]
     };
 
 bio.display = function () {
@@ -162,4 +142,3 @@ work.display();
 projects.display();
 education.display();
 addMap();
-
